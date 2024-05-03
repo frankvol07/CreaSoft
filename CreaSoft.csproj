@@ -43,6 +43,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -81,8 +83,12 @@
     </Compile>
     <Compile Include="Clases\Clientes.cs" />
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\Costes.cs" />
     <Compile Include="Clases\fact.cs" />
     <Compile Include="Clases\Login.cs" />
+    <Compile Include="Costos.xaml.cs">
+      <DependentUpon>Costos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Factura.xaml.cs">
       <DependentUpon>Factura.xaml</DependentUpon>
     </Compile>
@@ -90,6 +96,10 @@
       <DependentUpon>Registro.xaml</DependentUpon>
     </Compile>
     <Page Include="Buscar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Costos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -233,6 +243,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="cerrar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="contraseña.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="signo-de-dolar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="signo-de-dolar %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

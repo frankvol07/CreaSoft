@@ -146,5 +146,13 @@ namespace CreaSoft
             DescripcionServicio.Text = "";
 
         }
+
+        private void Costosir(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+
+            Costos ventanaBuscar = new Costos();
+            ventanaBuscar.Show();
+        }
     }
 }

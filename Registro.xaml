@@ -142,7 +142,7 @@
             </Button.BorderBrush>
         </Button>
         <Grid Margin="182,229,4,34" Grid.ColumnSpan="3">
-            <Grid Margin="-30,-54,-180,-262" Background="#FFDDCDF1">
+            <Grid Margin="-30,-54,-186,-262" Background="#FFDDCDF1">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="129.094"/>
@@ -209,7 +209,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="Limpiar" Content="Limpiar" Foreground="white" FontSize="25" HorizontalAlignment="Left" Margin="288,156,0,0" VerticalAlignment="Top" Width="200" Height="56" Click="Button_Click_L" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" >
+        <Button x:Name="Limpiar" Content="Limpiar" Foreground="white" FontSize="25" HorizontalAlignment="Left" Margin="206,156,0,0" VerticalAlignment="Top" Width="166" Height="56" Click="Button_Click_L" Grid.Column="1" Grid.Row="1" >
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Background">
@@ -246,7 +246,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button Content="Guardar" Foreground="white" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="192" Height="56" Click="Button_Click_1" Grid.Column="1" Grid.Row="1" Margin="77,156,0,0" >
+        <Button Content="Guardar" Foreground="white" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Height="56" Click="Button_Click_1" Grid.Row="1" Margin="10,156,0,0" Grid.Column="1" >
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Background">
@@ -291,6 +291,43 @@
         <Image HorizontalAlignment="Left" Height="47" Margin="413,319,0,0" VerticalAlignment="Top" Width="55" Source="/correo-electronico.png" Grid.Column="1" Grid.ColumnSpan="2"/>
         <Image x:Name="Min" HorizontalAlignment="Left" Height="36" Margin="122,6,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="-0.132,0.583" Source="/cerrar.png" Grid.Column="5" MouseDown="Minimizar"/>
         <Image HorizontalAlignment="Left" Height="40" Margin="162,10,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="-0.132,0.583" Source="/cerrar (1).png" Grid.Column="5" MouseDown="Cerrar"/>
+        <Button x:Name="Costos" Content="Costos" Foreground="white" FontSize="25" HorizontalAlignment="Left" Margin="394,156,0,0" VerticalAlignment="Top" Width="168" Height="56" Click="Costosir"  Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="5" >
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF020C13" Offset="0.087"/>
+                                <GradientStop Color="#FF881CA9" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="border" Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="border" Property="Background" Value="Black"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFB671D8" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
     </Grid>
 </Window>
 

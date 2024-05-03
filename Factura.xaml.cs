@@ -11,10 +11,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Creasoft.Clases;
 using CreaSoft.Clases;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-using static CreaSoft.Clases.Factura2;
+
 
 
 namespace CreaSoft
@@ -79,23 +80,10 @@ namespace CreaSoft
 
         private void Button_Click_factura(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                var codigoCliente = txtcliente.Text; // TextBox donde se ingresa el código del cliente
-                var conexion = new ConexionSqlServer();
+            string codigoCliente = txtcliente.Text;
 
-                var cliente = conexion.ObtenerCliente(codigoCliente); // Obtener datos del cliente por código
-
-                // Llamar al método estático GenerarPDF en la clase Factura
-                Factura2.GenerarPDF(cliente, "factura.pdf");
-
-                MessageBox.Show("Factura generada y guardada como 'factura.pdf'");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}");
-            }
-
+            GeneradorPDF generadorPDF = new GeneradorPDF();
+            generadorPDF.GenerarFacturaPDF(codigoCliente);
             // Obtén el código de la factura desde la interfaz de usuario (textbox, dropdown, etc.)
 
         }
